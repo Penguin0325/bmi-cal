@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}ホーム{% endblock %}
+
+{% block content %}
+    <form method="post">{% csrf_token %}
+        <h1>BMI計算</h1>
+        {{ form.as_p }}
+        <!-- 名前<input type="text" name="user">
+        年齢<input type="number" name="age">
+        体重<input type="number" name="weight"/>
+        身長<input type="number" name="height"/> -->
+        <button type="submit">送信</button>
+        <!-- <a href={% url 'bmi-home'%} type="submit">
+            送信
+        </a> -->
+        <!-- action="{% url 'bmi-home'%}" -->
+    </form>
+{% endblock %}
